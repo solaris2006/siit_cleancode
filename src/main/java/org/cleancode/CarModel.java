@@ -24,4 +24,12 @@ public class CarModel {
         return yearInterval;
     }
 
+    @Override
+    public String toString() {
+        return "CarModel{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", yearInterval=" + yearInterval +
+                '}';
+    }
 }

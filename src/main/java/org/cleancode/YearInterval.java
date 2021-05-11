@@ -12,6 +12,10 @@ public class YearInterval {
         this.end = end;
     }
 
+    public boolean intersect(YearInterval yearInterval1) {
+        return start <= yearInterval1.getEnd() && yearInterval1.getStart() <= end;
+    }
+
     public int getStart() {
         return start;
     }
