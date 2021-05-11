@@ -3,15 +3,13 @@ package org.cleancode;
 public class CarModel {
     private final String make;
     private final String model;
-    private final int startYear;
-    private final int endYear;
+    private final YearInterval yearInterval;
 
     public CarModel(String make, String model, YearInterval yearInterval) {
         this.make = make;
         this.model = model;
 
-        this.startYear = yearInterval.getStart();
-        this.endYear = yearInterval.getEnd();
+        this.yearInterval = yearInterval;
     }
 
     public String getMake() {
@@ -22,12 +20,8 @@ public class CarModel {
         return model;
     }
 
-    public int getStartYear() {
-        return startYear;
-    }
-
-    public int getEndYear() {
-        return endYear;
+    public YearInterval getYearInterval() {
+        return yearInterval;
     }
 
 }

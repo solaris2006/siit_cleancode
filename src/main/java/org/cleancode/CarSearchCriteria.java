@@ -1,22 +1,16 @@
 package org.cleancode;
 
 public class CarSearchCriteria {
-    private final int startYear;
-    private final int endYear;
+    private final YearInterval yearInterval;
     private final String make;
 
     public CarSearchCriteria(YearInterval yearInterval, String make) {
-        this.startYear = yearInterval.getStart();
-        this.endYear = yearInterval.getEnd();
+        this.yearInterval = yearInterval;
         this.make = make;
     }
 
-    public int getStartYear() {
-        return startYear;
-    }
-
-    public int getEndYear() {
-        return endYear;
+    public YearInterval getYearInterval() {
+        return yearInterval;
     }
 
     public String getMake() {

@@ -8,8 +8,8 @@ public class SearchEngine {
         Iterator<CarModel> carModelIterator = carModels.listIterator();
         while (carModelIterator.hasNext()) {
             CarModel currentCarModel = carModelIterator.next();
-            if (!MathUtil.intervalsIntersect(criteria.getStartYear(), criteria.getEndYear(),
-                    currentCarModel.getStartYear(), currentCarModel.getEndYear())) {
+            if (!MathUtil.intervalsIntersect(criteria.getYearInterval().getStart(), criteria.getYearInterval().getEnd(),
+                    currentCarModel.getYearInterval().getStart(), currentCarModel.getYearInterval().getEnd())) {
                 carModelIterator.remove();
             }
         }
