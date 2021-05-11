@@ -5,9 +5,9 @@ public class CarSearchCriteria {
     private final int endYear;
     private final String make;
 
-    public CarSearchCriteria(int startYear, int endYear, String make) {
-        this.startYear = startYear;
-        this.endYear = endYear;
+    public CarSearchCriteria(YearInterval yearInterval, String make) {
+        this.startYear = yearInterval.getStart();
+        this.endYear = yearInterval.getEnd();
         this.make = make;
     }
 
