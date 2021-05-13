@@ -1,4 +1,4 @@
-package org.cleancode.notes;
+package org.cleancode.notes.v1;
 
 import java.util.Objects;
 
